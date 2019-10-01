@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: roboto, sans-serif;
+    color: #0f293d;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+a {
+    color: #f6f9e7;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%
+}
+
+.header__main {
+    width: 100%;
+    min-height: 100%;
+    background: url(/img/logo/thomas-verbruggen-OIVuAKXW9VA-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.header__logo {
+    background: url(/img/logo/logo_maska_lw.png);
+    // Photo by Thomas Verbruggen on Unsplash
+    background-size: cover;
+    width: 30vw;
+    min-height: 30vw;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.header__scroll {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 50px;
+}
+
+.header__socialmedia {
+    display: flex;
+
+    ul {
+        text-decoration: none;
+
+        li {
+            display: inline-block;
+            padding: 40px;
+        }
+    }
+
+}
+
+//* paralaxa *//
+
+.paralax__plantwalls,
+.paralax__plantstalagmites,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.paralax__plantwalls {
+    background-image: url("img/logo/28767794_10212721307601363_1450913357_o.jpg");
+    min-height: 50%;
+}
+
+.paralax__plantstalagmites {
+    background-image: url("img/logo/swed4.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("img_parallax3.jpg");
+    min-height: 400px;
+}
+
+
+.paralax__caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: darkgreen;
+}
+
+.paralax__caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+// h3 {
+//     letter-spacing: 5px;
+//     text-transform: uppercase;
+//     font: 20px "Lato", sans-serif;
+//     color: #111;
+// }
+
+// navbar
+
+.nav__main ul {
+
+    list-style: none;
+    // margin: 0;
+    // padding: 0;
+    // width: 25%;
+    // height: 25%;
+    background: rgba(255, 255, 255, 0.5);
+    background-color: darkslategray;
+    // position: fixed;
+    height: 100%;
+
+    li {
+        display: inline-block;
+        // color: #000;
+        padding: 8px 16px;
+        // text-decoration: none;
+    }
+}
+
+.offer__item {
+    padding: 10px;
+    font-size: 1rem;
+    color: darkgreen;
+    text-align: justify;
+}
+
+.offer {
+    margin: 20px;
+}
+
+.about {
+    margin: 20px;
+
+    p {
+        padding: 10px;
+        font-size: 1rem;
+        color: darkgreen;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
