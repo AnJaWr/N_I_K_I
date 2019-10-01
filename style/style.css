@@ -349,7 +349,7 @@ input[type="submit"] {
   transition: 0.6s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:active {
   background: darkgreen;
   color: lightgreen;
 }
@@ -402,7 +402,7 @@ input[type="submit"]:hover {
 
 .contact__adress ul li a {
   color: darkgreen;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .contact__adress ul li a span {
@@ -429,27 +429,41 @@ input[type="submit"]:hover {
   color: lightgreen;
 }
 
-@media screen and (max-width: 430px) {
-  .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about__logo {
-    width: 100px;
-    height: auto;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .contact__logo {
-    width: 80px;
-    height: auto;
-  }
-  .nav__main ul li {
-    display: block;
-  }
+.footer {
+  position: relative;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background: url(../img/logo/footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__copyright,
+.footer__privacy {
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer__copyright a,
+.footer__privacy a {
+  color: lightgreen;
+  text-decoration: none;
+}
+
+.footer__copyright a:hover,
+.footer__privacy a:hover {
+  color: white;
+}
+
+/* media queries  */
+@media screen and (max-width: 800px) {
   .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -498,6 +512,26 @@ input[type="submit"]:hover {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .about p {
+    font-size: 14px;
+  }
+  .about__logo {
+    width: 40%;
+    height: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contact__logo {
+    width: 80px;
+    height: auto;
+  }
+  .nav__main ul li {
+    display: block;
   }
   .paralax__caption {
     position: absolute;

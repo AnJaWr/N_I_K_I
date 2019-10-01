@@ -356,7 +356,7 @@ input[type="submit"] {
     color: green;
     transition: 0.6s;
 
-    &:hover {
+    &:active {
         background: darkgreen;
         color: lightgreen;
     }
@@ -402,7 +402,7 @@ input[type="submit"] {
 
             a {
                 color: darkgreen;
-                font-size: 1.2rem;
+                font-size: 1rem;
 
                 span {
                     font-weight: bold;
@@ -435,28 +435,39 @@ input[type="submit"] {
     }
 }
 
-@media screen and (max-width: 430px) {
-    .about {
-        flex-direction: column;
-    }
+.footer {
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: url(../img/logo/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+}
 
-    .about__logo {
-        width: 100px;
-        height: auto;
-        align-self: center;
-    }
+.footer__copyright,
+.footer__privacy {
+    padding: 20px;
+    font-size: 12px;
 
-    .contact__logo {
-        width: 80px;
-        height: auto;
 
-    }
+    a {
+        color: lightgreen;
+        text-decoration: none;
 
-    .nav__main ul {
-        li {
-            display: block;
+        &:hover {
+            color: white;
+
         }
     }
+}
+
+/* media queries  */
+
+@media screen and (max-width: 800px) {
+
 
     .contact {
         flex-direction: column;
@@ -505,6 +516,35 @@ input[type="submit"] {
     .contact__socialmedia {
         align-self: center;
     }
+
+}
+
+@media screen and (max-width: 430px) {
+    .about {
+        p {
+            font-size: 14px;
+        }
+
+    }
+
+    .about__logo {
+        width: 40%;
+        height: auto;
+        align-self: center;
+    }
+
+    .contact__logo {
+        width: 80px;
+        height: auto;
+
+    }
+
+    .nav__main ul {
+        li {
+            display: block;
+        }
+    }
+
 
     .paralax__caption {
         position: absolute;
