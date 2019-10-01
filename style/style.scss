@@ -18,20 +18,34 @@ body {
     -moz-osx-font-smoothing: grayscale
 }
 
-a {
-    color: #f6f9e7;
-    text-decoration: none
+.hidden {
+    display: none;
 }
+
+.logo__main {
+    width: 170px;
+    height: auto;
+    margin-right: 15px;
+    float: left
+}
+
+.logo__main--contact {
+    width: 100px;
+    height: auto;
+}
+
 
 img {
     max-width: 100%
 }
 
+
+/*    h e a d e r    */
 .header__main {
     width: 100%;
     min-height: 100%;
     background: url(../img/logo/main_leaves.jpg);
-    // picture by thomas Verburggen from unsplash
+    // Photo by Thomas Verbruggen on Unsplash
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,9 +61,10 @@ img {
 
 .header__logo {
     background: url(../img/logo/logo_maska_lw.png);
-    // Photo by Thomas Verbruggen on Unsplash
-    background-size: cover;
-    width: 30vw;
+    // position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 35vw;
     min-height: 30vw;
 
 }
@@ -87,33 +102,95 @@ img {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
     bottom: 0;
-    display: block;
+    // display: block;
+    font-size: 1.2rem;
     height: 50px;
     left: 50%;
     margin-left: -25px;
     position: absolute;
     width: 50px;
+
+    .fas {
+        color: white;
+    }
+
+
 }
 
 .header__socialmedia {
     display: flex;
+    position: relative;
+    top: 0;
 
     ul {
         text-decoration: none;
 
         li {
             display: inline-block;
-            padding: 40px;
+            padding: 30px;
+            font-size: 1.2rem;
+
+            a {
+                color: white;
+                transition: 0.6s;
+
+
+                &:hover {
+                    color: lightgreen;
+                }
+            }
         }
     }
 
+}
+
+/*    navbar     */
+
+
+
+.nav__main ul {
+
+    list-style: none;
+    // margin: 0;
+    // padding: 0;
+    // width: 25%;
+    // height: 25%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    background-color: darkslategray;
+    // position: fixed;
+    height: 100%;
+
+    li {
+        display: inline-block;
+        // color: #000;
+        padding: 8px 16px;
+        transition: 0.6s;
+
+        a {
+            color: #f6f9e7;
+            text-decoration: none
+        }
+
+        // text-decoration: none;
+        &:hover,
+        &:active {
+            background: lightgreen;
+
+            a {
+                color: darkgreen;
+            }
+        }
+    }
 }
 
 //* paralaxa *//
 
 .paralax__plantwalls,
 .paralax__plantstalagmites,
-.bgimg-3 {
+.paralax__tubegarden,
+.paralax__plantwires {
     position: relative;
     opacity: 0.8;
     background-attachment: fixed;
@@ -125,7 +202,7 @@ img {
 
 .paralax__plantwalls {
     background-image: url(../img/logo/28767794_10212721307601363_1450913357_o.jpg);
-    min-height: 50%;
+    min-height: 400px;
 }
 
 .paralax__plantstalagmites {
@@ -133,11 +210,15 @@ img {
     min-height: 400px;
 }
 
-.bgimg-3 {
-    background-image: url(../img/logo/hydro.jpg);
+.paralax__plantwires {
+    background-image: url(../img/logo/wires.jpg);
     min-height: 400px;
 }
 
+.paralax__tubegarden {
+    background-image: url(../img/logo/hydro.jpg);
+    min-height: 400px;
+}
 
 .paralax__caption {
     position: absolute;
@@ -152,52 +233,39 @@ img {
     background-color: #111;
     color: #fff;
     padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-
-// h3 {
-//     letter-spacing: 5px;
-//     text-transform: uppercase;
-//     font: 20px "Lato", sans-serif;
-//     color: #111;
-// }
-
-// navbar
-
-.nav__main ul {
-
-    list-style: none;
-    // margin: 0;
-    // padding: 0;
-    // width: 25%;
-    // height: 25%;
-    background: rgba(255, 255, 255, 0.5);
-    background-color: darkslategray;
-    // position: fixed;
-    height: 100%;
-
-    li {
-        display: inline-block;
-        // color: #000;
-        padding: 8px 16px;
-        // text-decoration: none;
-    }
-}
-
-.offer__item {
-    padding: 10px;
     font-size: 1rem;
-    color: darkgreen;
-    text-align: justify;
+    letter-spacing: 10px;
 }
 
 .offer {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.offer__item {
+
+    padding: 20px;
+    font-size: 1rem;
+    color: darkgreen;
+    text-align: justify;
+
+}
+
+
+
+.offer__plantwalls,
+.offer__plantwires,
+.offer__plantstalagmites,
+.offer__tubegarden {
+    margin: 80px 0px;
 }
 
 .about {
     margin: 20px;
+    display: flex;
 
     p {
         padding: 10px;
@@ -207,22 +275,247 @@ img {
     }
 }
 
-@media screen and (max-width: 900px) {
-    ul.sidenav {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+/*   f o r m u l a rz   */
 
-    ul.sidenav li a {
-        float: left;
-        padding: 15px;
+
+
+hr.contact__line {
+    width: 25%;
+    border: 0px;
+    border-top: 1px solid green;
+
+
+}
+
+
+
+.contact__form {
+    width: 48%;
+}
+
+label {
+    padding: 10px;
+    display: block;
+    font-size: 12px;
+}
+
+label[for="agree"] {
+    display: inline-block;
+    padding: 1%;
+
+}
+
+.form {
+    padding: 2%;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    display: block;
+    border: 1px solid green;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+}
+
+select:focus,
+input:focus {
+    color: #000;
+    outline: 0;
+    background-color: lightgreen;
+}
+
+textarea {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    border: 1px solid green;
+    font-size: 12px;
+
+    &:focus {
+        outline: 0;
+        color: darkgreen;
     }
 }
 
-@media screen and (max-width: 400px) {
-    ul.sidenav li a {
-        text-align: center;
-        float: none;
+input[type="submit"] {
+    display: inline-block;
+    margin-top: 10px;
+    border: 0px;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: lightgreen;
+    color: green;
+    transition: 0.6s;
+
+    &:hover {
+        background: darkgreen;
+        color: lightgreen;
+    }
+
+}
+
+/* c o n t a c t    d i v */
+
+.contact {
+    margin: 5px 20px;
+
+    h3 {
+        margin-top: 30px;
+    }
+}
+
+.contact__container {
+
+    display: flex;
+
+
+}
+
+.contact__data {
+    display: flex;
+}
+
+.contact__adress {
+    width: 47%;
+    margin: 20px;
+    border-left: 1px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        list-style: none;
+
+        li {
+            color: green;
+            font-size: 24px;
+            padding: 15px;
+            transition: 0.6s;
+
+            a {
+                color: darkgreen;
+                font-size: 1.2rem;
+
+                span {
+                    font-weight: bold;
+                    color: darkgreen
+                }
+            }
+
+            &:hover {
+                color: lightgreen;
+
+            }
+        }
+    }
+}
+
+.contact__socialmedia {
+    ul {
+        li {
+            display: inline-block;
+            transition: 0.6s;
+
+            i {
+                transition: 0.6s;
+            }
+
+            &:hover i {
+                color: lightgreen;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about__logo {
+        width: 100px;
+        height: auto;
+        align-self: center;
+    }
+
+    .contact__logo {
+        width: 80px;
+        height: auto;
+
+    }
+
+    .nav__main ul {
+        li {
+            display: block;
+        }
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .contact__container {
+        flex-direction: column;
+    }
+
+    .contact__form {
+        width: 100%;
+    }
+
+    .contact__adress {
+        border: 0px;
+        width: 100%;
+        margin: 5px;
+
+        ul {
+            li {
+                font-size: 12px;
+
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+
+    .contact__data {
+        display: flex;
+        flex-direction: column;
+
+        .contact__logo {
+            align-self: center;
+        }
+
+    }
+
+    .contact__socialmedia {
+        align-self: center;
+    }
+
+    .paralax__caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%
+    }
+
+    .paralax__caption span.border {
+        width: 100%;
+
+        letter-spacing: 1px;
     }
 }

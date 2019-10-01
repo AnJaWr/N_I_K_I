@@ -10,10 +10,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favico_min.png">
 
     <link href="https://fonts.googleapis.com/css?family=Lora:700,700i|Roboto:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <meta name="og:title" property="og:title"
+        content="og:Niki, zielone ściany, greenwalls, plantwires, systemy hydroponiczne, sadzenie roślin, sznury zieleni">
+
     <script src="https://kit.fontawesome.com/a4436cf5ee.js"></script>
-    <title>NIKI</title>
+    <title>NIKI - zielone sciany, roślinne stalagmity,sznury zieleni, systemy hydroponiczne </title>
 </head>
 
 <body>
@@ -31,10 +35,10 @@
                             class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
-        <div class="header__scroll"> <a href="#0"><img src="img/logo/cd-arrow.gif"></a></div>
-        <!-- <div class="cd-project-info" data-url="content"> -->
+        <div class="header__scroll"> <a href="#nav__main"><i class="fas fa-chevron-down"></i></a></div>
+
     </header>
-    <nav class="nav__main">
+    <nav class="nav__main" id="nav__main">
         <ul>
             <li><a class="active" href="#about">O nas</a></li>
             <li><a href="#offer">Oferta</a></li>
@@ -44,30 +48,40 @@
     </nav>
 
     <section id="about" class="about">
-        <p>
-            Jesteśmy Firmą zajmującą się planowaniem, wykonywaniem oraz pielęgnacją przestrzeni zielonych, a&nbsp;także
-            projektowaniem nietypowych instalacji związanych z&nbsp;roślinnością. Tworzymy innowacyjne
-            i&nbsp;ekologiczne
-            rozwiązania dla miast i&nbsp;ich mieszkańców.</p>
+        <div class="about">
+            <h1 class="hidden"> NIKI - zielone ściany, systemy hydroponiczne, roślinne stalagmity, sznury zieleni</h1>
+            <div class="about__logo">
+                <img src="img/logo/logo_niki.jpg" class="logo__main"
+                    alt="Niki logo zielone ściany sznury zieleni roślinne stalagmity systemy hydroponiczne">
+            </div>
+            <div>
+                <p>Jesteśmy Firmą zajmującą się planowaniem, wykonywaniem oraz pielęgnacją przestrzeni zielonych,
+                    a&nbsp;także
+                    projektowaniem nietypowych instalacji związanych z&nbsp;roślinnością. Tworzymy innowacyjne
+                    i&nbsp;ekologiczne
+                    rozwiązania dla miast i&nbsp;ich mieszkańców.</p>
 
-        <p> Długoletnie doświadczenie w branży architektonicznej i&nbsp;ogrodniczejoraz prawie dziesięcioletnia
-            współpraca ze szwedzką firmą Green Fortune pozwala nam na realizację nietypowych projektów zielonych
-            związanych zarówno
-            z&nbsp;wnętrzami i&nbsp;przestrzenią zewnętrzną. Oferujemy gwarancję, konserwację i&nbsp;umowę serwisową dla
-            każdej
-            zielonej instalacji opisanej poniżej.</p>
-
+                <p> Długoletnie doświadczenie w branży architektonicznej i&nbsp;ogrodniczejoraz prawie dziesięcioletnia
+                    współpraca ze szwedzką firmą Green Fortune pozwala nam na realizację nietypowych projektów zielonych
+                    związanych zarówno
+                    z&nbsp;wnętrzami i&nbsp;przestrzenią zewnętrzną. Oferujemy gwarancję, konserwację i&nbsp;umowę
+                    serwisową dla
+                    każdej
+                    zielonej instalacji opisanej poniżej.</p>
+            </div>
+        </div>
     </section>
 
-    <div class="paralax__plantwalls">
-        <div class="paralax__caption">
-            <span class="border">Zielone ściany</span>
-        </div>
-    </div>
+
 
     <section id="offer" class="offer">
-        <div class="offer__plantwalls">
 
+        <div class="paralax__plantwalls">
+            <div class="paralax__caption">
+                <span class="border">Zielone ściany</span>
+            </div>
+        </div>
+        <div class="offer__plantwalls">
             <p class="offer__item">To rozwiązanie, które umożliwia łączenie dużych ilości roślin bez utraty cennej
                 powierzchni podłogi.
                 Ściany zieleni wyglądają imponująco, a&nbsp;ponadto zapewniają wszelkie korzyści, jakie może dać
@@ -102,6 +116,11 @@
                 nawadniania i&nbsp;nawożenia. Często łączone z&nbsp;nasadzeniami horyzontalnymi. Roślinne stalagmity
                 to&nbsp;fantastyczne rozwiązanie dla wysokich wnętrz galerii czy pasaży.</p>
         </div>
+        <div class="paralax__plantwires">
+            <div class="paralax__caption">
+                <span class="border">Sznury zieleni</span>
+            </div>
+        </div>
         <div class="offer__plantwires">
             <p class="offer__item">Produkt inspirowany wiszącymi strukturami roślinnymi w&nbsp;lesie deszczowym. Wiszące
                 sznury zieleni pozwalają
@@ -115,6 +134,11 @@
                 są&nbsp;nawadniane i&nbsp;nawożone
                 automatycznie dzięki zintegrowanemu systemowi.</p>
 
+        </div>
+        <div class="paralax__tubegarden">
+            <div class="paralax__caption">
+                <span class="border">System hydroponiczny</span>
+            </div>
         </div>
         <div class="offer__tubegarden">
             <p class="offer__item">Pozwala na rozmieszczenie roślin w pomieszczeniach w&nbsp;unikalny
@@ -135,28 +159,76 @@
                 w&nbsp;nowoczesnych
                 szklarniach hydroponicznych, może być również używany do&nbsp;uprawy roślin jadalnych.</p>
         </div>
-
-
     </section>
-    <section class="projects"></section>
 
-    <section class="contact"></section>
+    <section class="projects"></section>
+    <hr class="contact__line">
+    <section class="contact">
+        <h3 class="contact">Kontakt</h3>
+        <div class="contact__container">
+
+            <div class="contact__form">
+                <form class="form" method="POST" action="https://formspree.io/niki.headoffice@gmail.com">
+                    <label for="name">Imię i nazwisko *: </label><input type="text" name="name" id="name" autofocus
+                        required>
+                    <label for="phone">Telefon *: </label> <input type="tel" name="phone" id="phone" required>
+                    <label for="email">Email *: </label> <input type="email" name="email" id="email" required>
+
+                    <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
+                    <input type="checkbox" name="agree" value="agree" id="agree" required><label for="agree">Wyrażam
+                        zgodę
+                        na
+                        przetwarzanie
+                        danych osobowych w celach kontaktowych</label><br>
+                    <input type="submit" value="Wyślij">
+
+
+                </form>
+            </div>
+            <div class="contact__adress">
+                <div class="contact__data">
+                    <div class="contact__logo">
+                        <img src="img/logo/logo_niki.jpg" class="logo__main--contact "
+                            alt="Niki logo zielone ściany sznury zieleni roślinne stalagmity systemy hydroponiczne">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone-square-alt"></i> <a href="tel:695 331 301"> Zadzwoń <span>+48 695
+                                        331
+                                        301</span></a></li>
+                            <li>
+
+                                <i class="fab fa-facebook-messenger"></i> <a href="https://m.me/NIKIheadoffice">
+                                    Kontakt przez<span> Messengera</span>
+
+                                </a></li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:tomasz.krajewski@greenfortune.com">
+                                    <span>tomasz.krajewski@greenfortune.com
+                                    </span></a></li>
+
+                    </div>
+                </div>
+                <div class="contact__socialmedia">
+                    <ul>
+                        <li><a href="https://www.facebook.com/NIKIheadoffice/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/niki.headoffice/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://https://www.linkedin.com/company/n-i-k-i/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer></footer>
 
-    <!-- <main class="cd-image-mask-effect">
-        <div class="featured-image"></div>
-        <div class="mask">
-            <a href="#0" class="project-trigger">
-                <img src="img/logo/logo_maska_w.png" alt="mask"></a>
 
-        </div>
-        <a href="#0" class="cd-scroll cd-img-replace">Scroll down</a>
-        <div class="cd-project-info" data-url="content">
-
-        </div>
-        <a href="#0" class="project-close cd-img-replace">Close Project</a>
-        </section>
-    </main> -->
 
     <!-- scripts -->
 
