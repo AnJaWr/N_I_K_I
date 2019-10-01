@@ -31,7 +31,7 @@ img {
 .header__main {
   width: 100%;
   min-height: 100%;
-  background: url(/img/logo/thomas-verbruggen-OIVuAKXW9VA-unsplash.jpg);
+  background: url(img/logo/thomas-verbruggen-OIVuAKXW9VA-unsplash.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ img {
 }
 
 .header__logo {
-  background: url(/img/logo/logo_maska_lw.png);
+  background: url(img/logo/logo_maska_lw.png);
   background-size: cover;
   width: 30vw;
   min-height: 30vw;
